@@ -40,7 +40,7 @@ public class StockSpanProblem {
 			//if stack is empty means current element is maximum of all elements to its left side
 			s[i]=st.isEmpty()?i+1:i-st.peek();
 			
-			//adding (span) to the stack.
+			// current index to the stack from the pop should happen for the next iteration.
 			st.push(i);
 			
 		}

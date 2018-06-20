@@ -1,4 +1,4 @@
-package com.srinivas.tutorialprogramming;
+    package com.srinivas.tutorialprogramming;
 
 class  TwoStacks{
     int arr[];
@@ -13,7 +13,7 @@ class  TwoStacks{
     }
     
     void push1(int x) {
-        if(top1<top2-1) {
+        if(top1<top2-1) {      
              top1++;
              arr[top1] = x;
         }
