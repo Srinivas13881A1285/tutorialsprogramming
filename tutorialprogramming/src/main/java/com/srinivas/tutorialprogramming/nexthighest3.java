@@ -19,9 +19,9 @@ public class nexthighest3 {
         
         //digits = [2,4,3,1]
         
-        // finding the index which distrubs the ascending order from right to left i.e 
-        // finding the index which distrubs the ascending order in list from left to right [2,4,3,1]
-        // 3 AT INDEX SWAPPOSITON
+         /*finding the index which distrubs the ascending order from right to left i.e
+         finding the index which distrubs the ascending order in list from left to right [2,4,3,1]
+         3 AT INDEX SWAPPOSITON*/
         int swapPosition = 0;   
         for(int i = 0 ; i < digits.size() -1 ; i ++ ) {
             if(digits.get(i) > digits.get(i+1)) {
@@ -30,20 +30,19 @@ public class nexthighest3 {
             }
         }
         
-        
-        //finding the next smallest numbers greater than element at swapPositon 
-        // [1,3,4,2] the next smallest numbers greater than element at swapPositon from left to right  after swapOsiton is 4
-        //[2,4,3,1] which means in list the next smallest numbers greater than element swapPositon from right to left  befor swappositon  is 4
+/*        finding the next smallest numbers greater than element at swapPositon
+         [1,3,4,2] the next smallest numbers greater than element at swapPositon from left to right  after swapOsiton is 4
+        [2,4,3,1] which means in list the next smallest numbers greater than element swapPositon from right to left  befor swappositon  is 4*/
         int nextMinNumGtSwapPosition = swapPosition - 1;
         for(int i1 = swapPosition - 2; i1 >= 0; i1-- ) {
             if(digits.get(i1) > digits.get(swapPosition) && digits.get(i1) < digits.get(nextMinNumGtSwapPosition )) {
                 nextMinNumGtSwapPosition = i1;
             }
         }
-
+/*
         //swappPositonelement = 3
         //nextMinNumGtSwapPosition =4
-        // swap swapPositon element and nextMinNumGtThree
+        // swap swapPositon element and nextMinNumGtThree*/
     
         int temp = digits.get(swapPosition);
         digits.set(swapPosition,digits.get(nextMinNumGtSwapPosition));

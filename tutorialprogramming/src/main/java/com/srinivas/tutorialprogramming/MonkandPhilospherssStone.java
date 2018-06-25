@@ -3,8 +3,7 @@ import java.util.Scanner;
 import java.util.Stack;
 class MonkandPhilospherssStone {
     @SuppressWarnings("unused")
-    static
-    Stack<Integer> s = new  Stack<Integer>();
+    private static Stack<Integer> s = new  Stack<Integer>();
     public static void main(String[] args){
         @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in);
@@ -35,5 +34,7 @@ class MonkandPhilospherssStone {
                 
         }
         System.out.println(result);
+
     }
+
 }
